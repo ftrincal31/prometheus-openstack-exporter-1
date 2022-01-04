@@ -81,7 +81,8 @@ class OSClient(object):
                     "password": {
                         "user": {
                             "name": self.username,
-                            "domain": {"id": self.user_domain},
+                            #"domain": {"id": self.user_domain},
+                            "domain": {"name": self.user_domain},
                             "password": self.password
                         }
                     }
@@ -89,7 +90,8 @@ class OSClient(object):
                 "scope": {
                     "project": {
                         "name": self.tenant_name,
-                        "domain": {"id": self.user_domain}
+                        #"domain": {"id": self.user_domain}
+                        "domain": {"name": self.user_domain}
                     }
                 }
             }
